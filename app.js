@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var routes = require('./routes');
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
@@ -9,20 +10,8 @@ app.locals.pagetitle = 'Awesome Website';
 /**
  * Express Routing
  * */
-app.get('/', function (request, response) {
-    response.render('default', {
-        title: 'Home',
-        classname: 'home',
-        users: ['Tahmid', 'Tanzm', 'Lupin']
-    });
-});
-
-app.get('/about', function (request, response) {
-    response.render('default', {
-        title: 'About Us',
-        classname: 'about'
-    });
-});
+app.get('/', routes.index);
+app.get('/about', routes.about);
 
 app.get('*', function (request, response) {
     response.send('Bad Route');
