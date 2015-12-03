@@ -33,3 +33,9 @@ mkdir node-express-app
 cd node-express-app
 npm init
 ```
+### 3. Building the [Node.js](https://developers.google.com/v8/) server app
+Node.js is a cross-platform runtime environment for developing server-side web applications.
+```
+cd /<path-to>/node-express-app
+npm install express
+```
