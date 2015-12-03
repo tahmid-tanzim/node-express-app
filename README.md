@@ -31,11 +31,14 @@ nvm list
 ```
 mkdir node-express-app
 cd node-express-app
+npm help
 npm init
 ```
-### 3. Building the [Node.js](https://developers.google.com/v8/) server app
-Node.js is a cross-platform runtime environment for developing server-side web applications.
+### 3. Installing [Express.js](http://expressjs.com)
+Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 ```
-cd /<path-to>/node-express-app
-npm install express
+npm install -g express
+express --version
+npm install express --save
 ```
+- More Express [APi reference](http://expressjs.com/en/4x/api.html)

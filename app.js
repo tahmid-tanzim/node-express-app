@@ -1,12 +1,13 @@
-var http = require('http');
-var myServer = http.createServer(function (request, response) {
-    response.writeHead(200, {
-        "Content-Type": "text/html"
-    });
+var express = require('express');
+var app = express();
 
-    response.write("<strong>Hello</strong> World");
-    response.end();
+/**
+ * Express Routing
+ * */
+app.get('/', function (request, response) {
+    response.send("<strong>Hello</strong> Express!");
 });
 
-myServer.listen(3000);
-console.log("Node server is running at 'http://localhost:3000'\nPress Ctrl+C to Exit.");
+var server = app.listen(3000, function () {
+    console.log("Node server is running at 'http://localhost:3000'\nPress Ctrl+C to Exit.");
+});
