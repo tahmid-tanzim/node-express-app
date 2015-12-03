@@ -6,7 +6,7 @@
 <body class="<%= classname %>">
 <% include partials/page/header.ejs %>
 <div class="container">
-    <h1><%= title %></h1>
+    <h1><%= pagetitle + ': ' + title %></h1>
 
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
         standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
@@ -17,7 +17,7 @@
         of
         Lorem Ipsum.</p>
 
-    <% if (typeof users != 'undefined') { %>
+    <% if (typeof users !== 'undefined') { %>
     <ul>
         <% for(var i = 0 ; i < users.length ; i++) { %>
         <li><%= users[i] %></li>
