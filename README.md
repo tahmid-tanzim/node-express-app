@@ -42,3 +42,8 @@ express --version
 npm install express --save
 ```
 - More Express [APi reference](http://expressjs.com/en/4x/api.html)
+### 4. Installing [EJS](http://www.embeddedjs.com/) Embedded JavaScript
+EJS cleans the HTML out of your JavaScript with client side templates. After EJS gets its rubber gloves on dirty code, you'll feel organized and uncluttered.
+```
+npm install ejs --save
+```

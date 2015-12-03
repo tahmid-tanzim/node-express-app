@@ -1,11 +1,17 @@
 var express = require('express');
 var app = express();
 
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
+
 /**
  * Express Routing
  * */
 app.get('/', function (request, response) {
-    response.send("<strong>Hello</strong> Express!");
+    response.render('default', {
+        title: 'Home',
+        users: ['Tahmid', 'Tanzm', 'Lupin']
+    });
 });
 
 app.get('/me', function (request, response) {
