@@ -10,25 +10,16 @@ app.set('views', __dirname + '/views');
 app.get('/', function (request, response) {
     response.render('default', {
         title: 'Home',
+        classname: 'home',
         users: ['Tahmid', 'Tanzm', 'Lupin']
     });
 });
 
-app.get('/me', function (request, response) {
-    response.send('@TahmidTanzim');
-});
-
-/* http://localhost:3000/who/Tahmid%20Tanzim */
-app.get('/who/:name?', function (request, response) {
-    var name = request.params.name;
-    response.send('Hello! ' + name);
-});
-
-/* http://localhost:3000/who/Tahmid%20Tanzim/Software%20Engineer */
-app.get('/who/:name?/:title?', function (request, response) {
-    var name = request.params.name;
-    var title = request.params.title;
-    response.send('<p>Name: ' + name + '<br>Title: ' + title + '</p>');
+app.get('/about', function (request, response) {
+    response.render('default', {
+        title: 'About Us',
+        classname: 'about'
+    });
 });
 
 app.get('*', function (request, response) {
