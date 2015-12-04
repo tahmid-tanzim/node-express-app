@@ -47,3 +47,14 @@ EJS cleans the HTML out of your JavaScript with client side templates. After EJS
 ```
 npm install ejs --save
 ```
+### 5. Installing [Express application generator](http://expressjs.com/en/starter/generator.html)
+Use the application generator tool, express, to quickly create an application skeleton.
+```
+npm install -g express-generator
+```
+Creating project with [Express Generator](http://expressjs.com/en/starter/generator.html)
+```
+express -e <project-name>
+# run the app:
+DEBUG=<project-name>:* npm start
+```
