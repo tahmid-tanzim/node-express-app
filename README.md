@@ -54,7 +54,10 @@ npm install -g express-generator
 ```
 Creating project with [Express Generator](http://expressjs.com/en/starter/generator.html)
 ```
-express -e <project-name>
+express -e node-express-app
 # run the app:
-DEBUG=<project-name>:* npm start
+DEBUG=node-express-app:* npm start
+```
+### 6. Deploy Node application in [Heroku](http://www.heroku.com/)
+```
 ```
